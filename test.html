@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard จปร.</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: radial-gradient(circle at top, #7c0000, #1e0000);
+      margin: 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 215, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+    }
+
+    h2 {
+      color: gold;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      position: relative;
+      margin: 20px 0;
+    }
+
+    input {
+      width: 250px;
+      padding: 12px 15px;
+      border: 1px solid gold;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #550000;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      box-shadow: 0 0 10px gold;
+      transform: scale(1.05);
+    }
+
+    button {
+      background: linear-gradient(90deg, #b30000, #ffcc00);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    button:hover::after {
+      width: 100%;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      color: gold;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>แดชบอร์ดการเชื่อมต่อ</h2>
+    <div class="input-group">
+      <input type="text" placeholder="Camera ID" id="cameraId">
+    </div>
+    <div class="input-group">
+      <input type="text" placeholder="Token" id="token">
+    </div>
+    <button id="submitBtn">เชื่อมต่อระบบ</button>
+  </div>
+
+  <footer>© 2025 จปร. Project Simulation</footer>
+
+  <script>
+    const btn = document.getElementById('submitBtn');
+    btn.addEventListener('click', () => {
+      btn.innerText = '🔗 กำลังเชื่อมต่อ...';
+      btn.disabled = true;
+      btn.style.opacity = '0.8';
+
+      setTimeout(() => {
+        btn.innerText = '✅ เชื่อมต่อสำเร็จ';
+        btn.style.background = 'linear-gradient(90deg, #ffcc00, #ff6600)';
+        btn.style.boxShadow = '0 0 15px gold';
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>

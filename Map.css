@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:red;
+}
+
+.logo {
+    display: flex;
+    background-color: yellow;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 7rem;
+    justify-content: space-between;
+    width: 100rem;
+    height: 16rem;
+
+    & img {
+        padding: 0.5rem;
+        height: 12rem;
+        width: 13rem;
+        margin: 0;
+        margin-top: 1rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 5.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.top-bar {
+    
+    height: 6rem;
+    margin-top: 1rem;
+    width: 100rem;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+    color: #ebd40d;
+    font-size: 3rem;
+    width: 100rem;
+}
+
+p1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: #edb40d;
+    font-weight: bold;
+    width: 100rem;
+}
+
+div.card-bar {
+    display: flex;
+    width: 100rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3rem;
+    
+}
+
+div.bar {
+    margin: 3rem;
+    width: 25rem;
+    height: 25rem;
+    padding-top: 3rem;
+    box-shadow: 1px 1px 10px gray;
+    background-color: whitesmoke;
+    border-radius: 3rem;
+
+    a {
+        text-decoration: none;
+        font-size: 23px;
+    }
+}
+
+.bar:hover {
+    transform: translateY(-3px);
+     transition: all 0.5s ease;
+     background-color: rgb(235, 221, 28);
+     box-shadow: 10px 10px 10px rgb(204, 5, 5);
+}
+
+img {
+    height: 10rem;
+    width: 10rem;
+    margin-left: 7.5rem;
+
+}
+
+
+
+h4  {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem;
+        margin-top: 3rem;
+        font-size: 25px;
+        color: #000;
+
+
+}
+
+p {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        padding-bottom: 2rem;
+        font-size: 21px;
+        color: rgb(65, 65, 65);
+    }
